@@ -113,6 +113,7 @@ section {
     width: clamp(600px, 50vw, 1000px);
     position: absolute;
     bottom: 0;
+    z-index: 1;
 }
 
 .pattern-image img {
@@ -168,7 +169,7 @@ section {
 .--info-about {
     font-family: var(--font-heading);
     color: #FFF;
-    font-size: clamp(2rem, 7vw, 6rem);
+    font-size: clamp(2.8rem, 7vw, 6rem);
     z-index: 9;
     letter-spacing: 2px;
     text-shadow: 0 0 20px rgb(5, 12, 119);
@@ -207,6 +208,54 @@ section {
     left: -30%;
 }
 
+.service-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    margin: auto;
+    font-family: var(--font-links);
+    width: 200px;
+    height: 200px;
+    background: var(--dark-container-blue);
+    outline: 2px solid var(--dark-stroke-blue);
+    outline-offset: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px var(--dark-stroke-blue);
+    z-index: 99;
+    color: #FFF;
+}
+
+.service-box h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.service-box p {
+    text-align: center;
+}
+
+.cw {
+    outline: 2px solid rgb(218, 8, 169);
+    outline-offset: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgb(218, 8, 169);
+}
+
+.ml {
+    outline: 2px solid rgb(8, 218, 194);
+    outline-offset: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgb(8, 218, 204);
+}
+
 /** services section ends ..... **/
 
 /** Testomonials section starts from here **/
@@ -235,7 +284,7 @@ section {
     left: 0;
 }
 
-.testo{
+.testo {
     width: 100%;
     padding: 10px;
     min-height: 100vh;
@@ -245,7 +294,8 @@ section {
     gap: 1rem;
     justify-content: space-between;
 }
-.testo-card{
+
+.testo-card {
     margin: auto;
     position: relative;
     padding: 5px;
@@ -257,35 +307,43 @@ section {
     z-index: 9;
     transition: 0.3s all ease-in-out;
 }
-.testo-img{
+
+.testo-img {
     margin: auto;
     width: 100px;
     height: 100px;
 }
-.testo-img img{
+
+.testo-img img {
     width: 100%;
 }
-.testo-info{
+
+.testo-info {
     margin: auto;
     font-family: var(--font-links);
     padding: 10px;
     color: #FFF;
 }
-.testo-stars{
+
+.testo-stars {
     margin-inline: 10%;
 }
-.testo-stars img{
-   width: 80%;
+
+.testo-stars img {
+    width: 80%;
 }
-.testo-diamonds{
+
+.testo-diamonds {
     position: absolute;
 }
-.upper{
+
+.upper {
     top: 0;
     left: 10%;
     rotate: 180deg;
 }
-.lower{
+
+.lower {
     bottom: 0;
     right: 10%;
 }
@@ -383,3 +441,19 @@ footer h1 {
 }
 
 /** Footer section ends ..... **/
+
+/** responsiveness starts from here **/
+@media all and (max-width:600px) {
+    .--info-about {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .left {
+        left: -85%;
+    }
+
+}
