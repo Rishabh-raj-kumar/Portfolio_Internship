@@ -212,10 +212,12 @@ section {
 /** Testomonials section starts from here **/
 #TESTOMONIALS {
     background: var(--mid-violet-bg);
+    z-index: -9;
 }
 
 .wave {
     position: absolute;
+    z-index: -1;
 }
 
 .wave img {
@@ -234,21 +236,59 @@ section {
 }
 
 .testo{
+    width: 100%;
+    padding: 10px;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
 }
 .testo-card{
+    margin: auto;
+    position: relative;
     padding: 5px;
-    width: 300px;
+    width: 250px;
+    height: 330px;
     background: var(--form-input-bg);
     border-radius: 10px;
     box-shadow: 0 0 20px 10px rgba(0, 22, 89, 0.396);
     z-index: 9;
+    transition: 0.3s all ease-in-out;
 }
-
-
+.testo-img{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+.testo-img img{
+    width: 100%;
+}
+.testo-info{
+    margin: auto;
+    font-family: var(--font-links);
+    padding: 10px;
+    color: #FFF;
+}
+.testo-stars{
+    margin-inline: 10%;
+}
+.testo-stars img{
+   width: 80%;
+}
+.testo-diamonds{
+    position: absolute;
+}
+.upper{
+    top: 0;
+    left: 10%;
+    rotate: 180deg;
+}
+.lower{
+    bottom: 0;
+    right: 10%;
+}
 
 /** Testomonials section ends ..... **/
 
