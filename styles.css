@@ -264,12 +264,10 @@ section {
 /** Testomonials section starts from here **/
 #TESTOMONIALS {
     background: var(--mid-violet-bg);
-    z-index: -9;
 }
 
 .wave {
     position: absolute;
-    z-index: -1;
 }
 
 .wave img {
@@ -301,40 +299,53 @@ section {
 .testo-card {
     margin: auto;
     position: relative;
-    padding: 5px;
     width: 250px;
     height: 330px;
     background: var(--form-input-bg);
     border-radius: 10px;
     box-shadow: 0 0 20px 10px rgba(0, 22, 89, 0.396);
-    z-index: 9;
+    z-index: 99;
     transition: 0.3s all ease-in-out;
 }
-
 .testo-img {
     margin: auto;
-    width: 100px;
+    width: 100%;
     height: 100px;
+    z-index: 999;
 }
 
 .testo-img img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
 }
 
 .testo-info {
-    margin: auto;
+    margin-top: 1.4rem;
+    margin-inline: auto;
     font-family: var(--font-links);
     padding: 10px;
     color: #FFF;
 }
-
-.testo-stars {
-    margin-inline: 10%;
+button{
+    font-family: var(--font-links);
+    padding-inline: 15px;
+    padding-block: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: var(--dark-mid-bg-blue);
+    box-shadow:  0  0 10px 5px #0b0a2f63;
+    margin-inline: 30%;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 
-.testo-stars img {
-    width: 80%;
-}
 
 .testo-diamonds {
     position: absolute;
@@ -389,11 +400,16 @@ form {
 
 form input,
 textarea {
-    font-family: var(--font-links);
+    font-size: 28px;
+    font-family: var(--font-logo);
     padding: 10px;
     outline: none;
     border: 2px solid var(--form-input-stroke);
     transition: 0.4s all ease-in-out;
+    letter-spacing: 1px;
+}
+::placeholder{
+    color: #b9b9b9;
 }
 
 input:focus,
